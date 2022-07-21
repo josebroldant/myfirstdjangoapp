@@ -14,8 +14,8 @@ import os
 import environ
 
 env = environ.Env(
-# set casting, default value
-DEBUG=(bool, False)
+    # set casting, default value
+    DEBUG=(bool, False)
 )
 
 from pathlib import Path
@@ -23,6 +23,8 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -34,7 +36,7 @@ SECRET_KEY = 'django-insecure-@g7yahz#=c05vqqk7$&y^tm$y+r0+o85jnx(ep*i=7jdrrlc(z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'pi-fd.herokuapp.com']
+ALLOWED_HOSTS = ['*', 'py-id.herokuapp.com']
 
 
 # Application definition
