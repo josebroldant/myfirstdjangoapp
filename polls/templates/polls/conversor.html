@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor</title>
+</head>
+<body>
+
+    {{ form.as_table }}
+    <hr>
+    {{ form.as_p }}
+    <hr>
+    {{ form.as_ul }}
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="submit">
+</form>
+
+</body>
+</html>
